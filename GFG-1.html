@@ -1,0 +1,47 @@
+<html lang="en"><head><meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>REPL</title>
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  </head>
+
+  <body>
+    <strong>New York City Death Stats </strong><br>
+    Top 10 causes of death amongst all New Yorkers:
+
+  
+
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <body>
+
+  <canvas id="myChart" style="width:100%;max-width:1500px"></canvas>
+
+  <script>
+  var xValues = ["Diseases of Heart (I00-I09, I11, I13, I20-I51)", "Malignant Neoplasms (Cancer: C00-C97)", "All Other Causes", "Influenza (Flu) and Pneumonia (J09-J18)", "Diabetes Mellitus (E10-E14)", "Chronic Lower Respiratory Diseases (J40-J47)", "Cerebrovascular Disease (Stroke: I60-I69)", "Essential Hypertension and Renal Diseases (I10, I12)", "Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86)", "Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44)"]; var yValues = [165372, 118815, 89609, 20302, 15688, 15027, 14818, 8270, 7467, 5804];
+var barColors = ["red", "green","blue","orange","brown","red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Top 10 causes of death"
+    }
+  }
+});
+</script>
+    
+  </body>
+</html>
